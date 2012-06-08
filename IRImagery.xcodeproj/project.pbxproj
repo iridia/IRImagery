@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF1B7DA81581E52A00CE590A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1B7DA71581E52A00CE590A /* Foundation.framework */; };
+		FF1B7DAE1581E52A00CE590A /* IRImagery.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1B7DAD1581E52A00CE590A /* IRImagery.m */; };
+		FF1B7DB61581E52A00CE590A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1B7DB51581E52A00CE590A /* SenTestingKit.framework */; };
+		FF1B7DB81581E52A00CE590A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1B7DB71581E52A00CE590A /* UIKit.framework */; };
+		FF1B7DB91581E52A00CE590A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1B7DA71581E52A00CE590A /* Foundation.framework */; };
+		FF1B7DBC1581E52A00CE590A /* libIRImagery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1B7DA41581E52A00CE590A /* libIRImagery.a */; };
+		FF1B7DC21581E52A00CE590A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF1B7DC01581E52A00CE590A /* InfoPlist.strings */; };
+		FF1B7DC51581E52A00CE590A /* IRImageryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1B7DC41581E52A00CE590A /* IRImageryTests.m */; };
+		FF1B7DD41581E60E00CE590A /* UIImage+IRImageryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1B7DCE1581E60E00CE590A /* UIImage+IRImageryAdditions.h */; };
+		FF1B7DD51581E60E00CE590A /* UIImage+IRImageryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1B7DCF1581E60E00CE590A /* UIImage+IRImageryAdditions.m */; };
+		FF1B7DD61581E60E00CE590A /* IRImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1B7DD01581E60E00CE590A /* IRImageView.h */; };
+		FF1B7DD71581E60E00CE590A /* IRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1B7DD11581E60E00CE590A /* IRImageView.m */; };
+		FF1B7DDB1581E70D00CE590A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1B7DDA1581E70D00CE590A /* UIKit.framework */; };
+		FFB7CDBD1581E877003062A6 /* UIImage+IRCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB7CDBB1581E876003062A6 /* UIImage+IRCompatibility.h */; };
+		FFB7CDBE1581E877003062A6 /* UIImage+IRCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB7CDBC1581E876003062A6 /* UIImage+IRCompatibility.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF1B7DBA1581E52A00CE590A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF1B7D9B1581E52A00CE590A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF1B7DA31581E52A00CE590A;
+			remoteInfo = IRImagery;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF1B7DA41581E52A00CE590A /* libIRImagery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIRImagery.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF1B7DA71581E52A00CE590A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FF1B7DAB1581E52A00CE590A /* IRImagery-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IRImagery-Prefix.pch"; sourceTree = "<group>"; };
+		FF1B7DAC1581E52A00CE590A /* IRImagery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IRImagery.h; path = IRImagery/IRImagery.h; sourceTree = "<group>"; };
+		FF1B7DAD1581E52A00CE590A /* IRImagery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IRImagery.m; path = IRImagery/IRImagery.m; sourceTree = "<group>"; };
+		FF1B7DB41581E52A00CE590A /* IRImageryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRImageryTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF1B7DB51581E52A00CE590A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		FF1B7DB71581E52A00CE590A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		FF1B7DBF1581E52A00CE590A /* IRImageryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IRImageryTests-Info.plist"; sourceTree = "<group>"; };
+		FF1B7DC11581E52A00CE590A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FF1B7DC31581E52A00CE590A /* IRImageryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRImageryTests.h; sourceTree = "<group>"; };
+		FF1B7DC41581E52A00CE590A /* IRImageryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRImageryTests.m; sourceTree = "<group>"; };
+		FF1B7DCE1581E60E00CE590A /* UIImage+IRImageryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+IRImageryAdditions.h"; path = "IRImagery/UIImage+IRImageryAdditions.h"; sourceTree = "<group>"; };
+		FF1B7DCF1581E60E00CE590A /* UIImage+IRImageryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+IRImageryAdditions.m"; path = "IRImagery/UIImage+IRImageryAdditions.m"; sourceTree = "<group>"; };
+		FF1B7DD01581E60E00CE590A /* IRImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRImageView.h; path = IRImagery/IRImageView.h; sourceTree = "<group>"; };
+		FF1B7DD11581E60E00CE590A /* IRImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRImageView.m; path = IRImagery/IRImageView.m; sourceTree = "<group>"; };
+		FF1B7DDA1581E70D00CE590A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FFB7CDBB1581E876003062A6 /* UIImage+IRCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+IRCompatibility.h"; path = "IRImagery/UIImage+IRCompatibility.h"; sourceTree = "<group>"; };
+		FFB7CDBC1581E876003062A6 /* UIImage+IRCompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+IRCompatibility.m"; path = "IRImagery/UIImage+IRCompatibility.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF1B7DA11581E52A00CE590A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF1B7DDB1581E70D00CE590A /* UIKit.framework in Frameworks */,
+				FF1B7DA81581E52A00CE590A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF1B7DB01581E52A00CE590A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF1B7DB61581E52A00CE590A /* SenTestingKit.framework in Frameworks */,
+				FF1B7DB81581E52A00CE590A /* UIKit.framework in Frameworks */,
+				FF1B7DB91581E52A00CE590A /* Foundation.framework in Frameworks */,
+				FF1B7DBC1581E52A00CE590A /* libIRImagery.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF1B7D991581E52A00CE590A = {
+			isa = PBXGroup;
+			children = (
+				FF1B7DAC1581E52A00CE590A /* IRImagery.h */,
+				FF1B7DAD1581E52A00CE590A /* IRImagery.m */,
+				FF1B7DCE1581E60E00CE590A /* UIImage+IRImageryAdditions.h */,
+				FF1B7DCF1581E60E00CE590A /* UIImage+IRImageryAdditions.m */,
+				FFB7CDBB1581E876003062A6 /* UIImage+IRCompatibility.h */,
+				FFB7CDBC1581E876003062A6 /* UIImage+IRCompatibility.m */,
+				FF1B7DD01581E60E00CE590A /* IRImageView.h */,
+				FF1B7DD11581E60E00CE590A /* IRImageView.m */,
+				FF1B7DAA1581E52A00CE590A /* Supporting Files */,
+				FF1B7DBD1581E52A00CE590A /* Tests */,
+				FF1B7DA61581E52A00CE590A /* Frameworks */,
+				FF1B7DA51581E52A00CE590A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF1B7DA51581E52A00CE590A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF1B7DA41581E52A00CE590A /* libIRImagery.a */,
+				FF1B7DB41581E52A00CE590A /* IRImageryTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF1B7DA61581E52A00CE590A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF1B7DA71581E52A00CE590A /* Foundation.framework */,
+				FF1B7DDA1581E70D00CE590A /* UIKit.framework */,
+				FF1B7DB51581E52A00CE590A /* SenTestingKit.framework */,
+				FF1B7DB71581E52A00CE590A /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF1B7DAA1581E52A00CE590A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF1B7DAB1581E52A00CE590A /* IRImagery-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = IRImagery;
+			sourceTree = "<group>";
+		};
+		FF1B7DBD1581E52A00CE590A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FF1B7DC31581E52A00CE590A /* IRImageryTests.h */,
+				FF1B7DC41581E52A00CE590A /* IRImageryTests.m */,
+				FF1B7DBE1581E52A00CE590A /* Supporting Files */,
+			);
+			name = Tests;
+			path = IRImageryTests;
+			sourceTree = "<group>";
+		};
+		FF1B7DBE1581E52A00CE590A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF1B7DBF1581E52A00CE590A /* IRImageryTests-Info.plist */,
+				FF1B7DC01581E52A00CE590A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FF1B7DA21581E52A00CE590A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF1B7DD41581E60E00CE590A /* UIImage+IRImageryAdditions.h in Headers */,
+				FF1B7DD61581E60E00CE590A /* IRImageView.h in Headers */,
+				FFB7CDBD1581E877003062A6 /* UIImage+IRCompatibility.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FF1B7DA31581E52A00CE590A /* IRImagery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF1B7DC81581E52A00CE590A /* Build configuration list for PBXNativeTarget "IRImagery" */;
+			buildPhases = (
+				FF1B7DA01581E52A00CE590A /* Sources */,
+				FF1B7DA11581E52A00CE590A /* Frameworks */,
+				FF1B7DA21581E52A00CE590A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IRImagery;
+			productName = IRImagery;
+			productReference = FF1B7DA41581E52A00CE590A /* libIRImagery.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FF1B7DB31581E52A00CE590A /* IRImageryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF1B7DCB1581E52A00CE590A /* Build configuration list for PBXNativeTarget "IRImageryTests" */;
+			buildPhases = (
+				FF1B7DAF1581E52A00CE590A /* Sources */,
+				FF1B7DB01581E52A00CE590A /* Frameworks */,
+				FF1B7DB11581E52A00CE590A /* Resources */,
+				FF1B7DB21581E52A00CE590A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF1B7DBB1581E52A00CE590A /* PBXTargetDependency */,
+			);
+			name = IRImageryTests;
+			productName = IRImageryTests;
+			productReference = FF1B7DB41581E52A00CE590A /* IRImageryTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF1B7D9B1581E52A00CE590A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Iridia Productions";
+			};
+			buildConfigurationList = FF1B7D9E1581E52A00CE590A /* Build configuration list for PBXProject "IRImagery" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FF1B7D991581E52A00CE590A;
+			productRefGroup = FF1B7DA51581E52A00CE590A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF1B7DA31581E52A00CE590A /* IRImagery */,
+				FF1B7DB31581E52A00CE590A /* IRImageryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF1B7DB11581E52A00CE590A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF1B7DC21581E52A00CE590A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FF1B7DB21581E52A00CE590A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF1B7DA01581E52A00CE590A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF1B7DAE1581E52A00CE590A /* IRImagery.m in Sources */,
+				FF1B7DD51581E60E00CE590A /* UIImage+IRImageryAdditions.m in Sources */,
+				FF1B7DD71581E60E00CE590A /* IRImageView.m in Sources */,
+				FFB7CDBE1581E877003062A6 /* UIImage+IRCompatibility.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF1B7DAF1581E52A00CE590A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF1B7DC51581E52A00CE590A /* IRImageryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF1B7DBB1581E52A00CE590A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF1B7DA31581E52A00CE590A /* IRImagery */;
+			targetProxy = FF1B7DBA1581E52A00CE590A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF1B7DC01581E52A00CE590A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF1B7DC11581E52A00CE590A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF1B7DC61581E52A00CE590A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FF1B7DC71581E52A00CE590A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF1B7DC91581E52A00CE590A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/IRImagery.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IRImagery/IRImagery-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FF1B7DCA1581E52A00CE590A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/IRImagery.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IRImagery/IRImagery-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FF1B7DCC1581E52A00CE590A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IRImagery/IRImagery-Prefix.pch";
+				INFOPLIST_FILE = "IRImageryTests/IRImageryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		FF1B7DCD1581E52A00CE590A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IRImagery/IRImagery-Prefix.pch";
+				INFOPLIST_FILE = "IRImageryTests/IRImageryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF1B7D9E1581E52A00CE590A /* Build configuration list for PBXProject "IRImagery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF1B7DC61581E52A00CE590A /* Debug */,
+				FF1B7DC71581E52A00CE590A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF1B7DC81581E52A00CE590A /* Build configuration list for PBXNativeTarget "IRImagery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF1B7DC91581E52A00CE590A /* Debug */,
+				FF1B7DCA1581E52A00CE590A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF1B7DCB1581E52A00CE590A /* Build configuration list for PBXNativeTarget "IRImageryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF1B7DCC1581E52A00CE590A /* Debug */,
+				FF1B7DCD1581E52A00CE590A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF1B7D9B1581E52A00CE590A /* Project object */;
+}
