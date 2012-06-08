@@ -14,54 +14,47 @@ static NSString * const kDidWriteToSavedPhotosCallback = @"-[UIImage(IRAdditions
 static NSString * const kIsDecodedImage = @"-[UIImage(IRAdditions) irIsDecodedImage]";
 
 
-@implementation UIImage (IRAdditions)
+CGRect IRImageryTransposedRect (CGSize size, UIImageOrientation orientation) {
 
-- (CGRect) irTransposedRectForSize:(CGSize)newSize {
-
-	switch (self.imageOrientation) {
+	switch (orientation) {
 		
 		case UIImageOrientationLeft:
 		case UIImageOrientationLeftMirrored:
 		case UIImageOrientationRight:
 		case UIImageOrientationRightMirrored:
-			return (CGRect){
-				CGPointZero,
-				(CGSize){
-					newSize.height,
-					newSize.width
-				}
-			};
-
+			return (CGRect){ CGPointZero, (CGSize){ size.height, size.width } };
+		
 		default:
-			return (CGRect){ CGPointZero, newSize };
+			return (CGRect){ CGPointZero, size };
 		
 	}
-	
+
 }
 
-- (CGAffineTransform) irTransformForSize:(CGSize)newSize {
-		
+
+CGAffineTransform IRImageryStandardTransform (CGSize size, UIImageOrientation orientation) {
+
 	CGAffineTransform transform = CGAffineTransformIdentity;
 
-	switch (self.imageOrientation) {
+	switch (orientation) {
 		
 		case UIImageOrientationDown:             // EXIF = 3
 		case UIImageOrientationDownMirrored: {   // EXIF = 4
-			transform = CGAffineTransformTranslate(transform, newSize.width, newSize.height);
+			transform = CGAffineTransformTranslate(transform, size.width, size.height);
 			transform = CGAffineTransformRotate(transform, M_PI);
 			break;
 		}
 
 		case UIImageOrientationLeft:             // EXIF = 6
 		case UIImageOrientationLeftMirrored: {   // EXIF = 5
-			transform = CGAffineTransformTranslate(transform, newSize.width, 0);
+			transform = CGAffineTransformTranslate(transform, size.width, 0);
 			transform = CGAffineTransformRotate(transform, M_PI_2);
 			break;
 		}
 
 		case UIImageOrientationRight:           // EXIF = 8
 		case UIImageOrientationRightMirrored: {  // EXIF = 7
-			transform = CGAffineTransformTranslate(transform, 0, newSize.height);
+			transform = CGAffineTransformTranslate(transform, 0, size.height);
 			transform = CGAffineTransformRotate(transform, -M_PI_2);
 			break;
 		}
@@ -72,18 +65,18 @@ static NSString * const kIsDecodedImage = @"-[UIImage(IRAdditions) irIsDecodedIm
 		
 	}
 
-	switch (self.imageOrientation) {
+	switch (orientation) {
 	
 		case UIImageOrientationUpMirrored:      // EXIF = 2
 		case UIImageOrientationDownMirrored: {  // EXIF = 4
-			transform = CGAffineTransformTranslate(transform, newSize.width, 0);
+			transform = CGAffineTransformTranslate(transform, size.width, 0);
 			transform = CGAffineTransformScale(transform, -1, 1);
 			break;
 		}
 
 		case UIImageOrientationLeftMirrored:    // EXIF = 5
 		case UIImageOrientationRightMirrored: {  // EXIF = 7
-			transform = CGAffineTransformTranslate(transform, newSize.height, 0);
+			transform = CGAffineTransformTranslate(transform, size.height, 0);
 			transform = CGAffineTransformScale(transform, -1, 1);
 			break;
 		}
@@ -95,7 +88,19 @@ static NSString * const kIsDecodedImage = @"-[UIImage(IRAdditions) irIsDecodedIm
 	}
 
 	return transform;
-	
+
+}
+
+
+@implementation UIImage (IRAdditions)
+
+- (CGSize) irPixelSize {
+
+	return (CGSize) {
+		self.size.width * self.scale,
+		self.size.height * self.scale
+	};
+
 }
 
 - (UIImage *) irStandardImage {
@@ -104,14 +109,9 @@ static NSString * const kIsDecodedImage = @"-[UIImage(IRAdditions) irIsDecodedIm
 	if (self.scale == 1)
 		return self;
 
-	UIGraphicsBeginImageContextWithOptions((CGSize){
-		self.size.width * self.scale,
-		self.size.height * self.scale
-	}, NO, 1.0);
+	UIGraphicsBeginImageContextWithOptions([self irPixelSize], NO, 1.0);
+	CGContextScaleCTM(UIGraphicsGetCurrentContext(), self.scale, self.scale);
 	
-	CGContextRef context = UIGraphicsGetCurrentContext();
-	
-	CGContextScaleCTM(context, self.scale, self.scale);
 	[self drawAtPoint:CGPointZero];
 	
 	return UIGraphicsGetImageFromCurrentImageContext();
@@ -147,7 +147,7 @@ static NSString * const kIsDecodedImage = @"-[UIImage(IRAdditions) irIsDecodedIm
 			
 			if (outputImage) {
 				
-				UIImage *image = [UIImage imageWithCGImage:outputImage];	//	TBD: Scale, orientation, etc.
+				UIImage *image = [UIImage imageWithCGImage:outputImage];
 				objc_setAssociatedObject(image, &kIsDecodedImage, (id)kCFBooleanTrue, OBJC_ASSOCIATION_ASSIGN);
 				
 				CGImageRelease(outputImage);
@@ -175,17 +175,16 @@ static NSString * const kIsDecodedImage = @"-[UIImage(IRAdditions) irIsDecodedIm
 	if (CGSizeEqualToSize(aSize, CGSizeZero))
 		return self;
 	
-	CGSize const drawnPixelSize = (CGSize){ aSize.width * self.scale, aSize.height * self.scale };
-	
-	CGAffineTransform const drawnTransform = [self irTransformForSize:drawnPixelSize];
-	CGRect const drawnRect = [self irTransposedRectForSize:drawnPixelSize];
+	CGSize const pixelSize = (CGSize){ aSize.width * self.scale, aSize.height * self.scale };
+	CGAffineTransform const transform = IRImageryStandardTransform(pixelSize, self.imageOrientation);
+	CGRect const rect = IRImageryTransposedRect(pixelSize, self.imageOrientation);
 	
 	CGColorSpaceRef const colorSpace = CGColorSpaceCreateDeviceRGB();
-	CGContextRef const context = CGBitmapContextCreate(NULL, drawnPixelSize.width, drawnPixelSize.height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);
+	CGContextRef const context = CGBitmapContextCreate(NULL, pixelSize.width, pixelSize.height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);
 	
-	CGContextConcatCTM(context, drawnTransform);
-	CGContextClearRect(context, drawnRect);
-	CGContextDrawImage(context, drawnRect, self.CGImage);
+	CGContextConcatCTM(context, transform);
+	CGContextClearRect(context, rect);
+	CGContextDrawImage(context, rect, self.CGImage);
 	
 	CGImageRef scaledImage = CGBitmapContextCreateImage(context);
 	
