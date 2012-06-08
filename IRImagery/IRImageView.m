@@ -20,7 +20,7 @@
 
 @implementation IRImageView
 @synthesize lastImagePtr;
-@dynamic delegate;
+@synthesize delegate;
 
 - (void) setImage:(UIImage *)newImage {
 
