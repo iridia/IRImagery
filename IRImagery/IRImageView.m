@@ -24,11 +24,11 @@
 
 - (void) setImage:(UIImage *)newImage {
 
-	[self setImage:newImage withOptions:WAImageViewForceAsynchronousOption];
+	[self setImage:newImage withOptions:IRImageViewOptionAsynchronousAssignment];
 
 }
 
-- (void) setImage:(UIImage *)newImage withOptions:(WAImageViewOptions)options {
+- (void) setImage:(UIImage *)newImage withOptions:(IRImageViewOptions)options {
 
 	void * imagePtr = (__bridge void *)newImage;
 
@@ -44,7 +44,7 @@
 		
   }
 
-	if (options & WAImageViewForceSynchronousOption) {
+	if (options & IRImageViewOptionSynchronousAssignment) {
 	
 		[self primitiveSetImage:newImage];
 		[self.delegate imageViewDidUpdate:self];

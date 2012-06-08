@@ -10,10 +10,10 @@
 
 enum {	
 	
-	WAImageViewForceAsynchronousOption = 1,
-	WAImageViewForceSynchronousOption = 2
+	IRImageViewOptionAsynchronousAssignment = 1,
+	IRImageViewOptionSynchronousAssignment = 2
 	
-}; typedef NSUInteger WAImageViewOptions;
+}; typedef NSUInteger IRImageViewOptions;
 
 
 @class IRImageView;
@@ -28,6 +28,6 @@ enum {
 
 @property (nonatomic, readwrite, weak) id<IRImageViewDelegate> delegate;
 
-- (void) setImage:(UIImage *)anImage withOptions:(WAImageViewOptions)options;
+- (void) setImage:(UIImage *)anImage withOptions:(IRImageViewOptions)options;
 
 @end
