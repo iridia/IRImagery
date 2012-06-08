@@ -22,6 +22,8 @@
 		FF1B7DDB1581E70D00CE590A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1B7DDA1581E70D00CE590A /* UIKit.framework */; };
 		FFB7CDBD1581E877003062A6 /* UIImage+IRCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB7CDBB1581E876003062A6 /* UIImage+IRCompatibility.h */; };
 		FFB7CDBE1581E877003062A6 /* UIImage+IRCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB7CDBC1581E876003062A6 /* UIImage+IRCompatibility.m */; };
+		FFB7CDC71582146D003062A6 /* NSBundle+IRImageryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB7CDC51582146D003062A6 /* NSBundle+IRImageryAdditions.h */; };
+		FFB7CDC81582146D003062A6 /* NSBundle+IRImageryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB7CDC61582146D003062A6 /* NSBundle+IRImageryAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		FF1B7DDA1581E70D00CE590A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FFB7CDBB1581E876003062A6 /* UIImage+IRCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+IRCompatibility.h"; path = "IRImagery/UIImage+IRCompatibility.h"; sourceTree = "<group>"; };
 		FFB7CDBC1581E876003062A6 /* UIImage+IRCompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+IRCompatibility.m"; path = "IRImagery/UIImage+IRCompatibility.m"; sourceTree = "<group>"; };
+		FFB7CDC51582146D003062A6 /* NSBundle+IRImageryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSBundle+IRImageryAdditions.h"; path = "IRImagery/NSBundle+IRImageryAdditions.h"; sourceTree = "<group>"; };
+		FFB7CDC61582146D003062A6 /* NSBundle+IRImageryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+IRImageryAdditions.m"; path = "IRImagery/NSBundle+IRImageryAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				FF1B7DCF1581E60E00CE590A /* UIImage+IRImageryAdditions.m */,
 				FFB7CDBB1581E876003062A6 /* UIImage+IRCompatibility.h */,
 				FFB7CDBC1581E876003062A6 /* UIImage+IRCompatibility.m */,
+				FFB7CDC51582146D003062A6 /* NSBundle+IRImageryAdditions.h */,
+				FFB7CDC61582146D003062A6 /* NSBundle+IRImageryAdditions.m */,
 				FF1B7DD01581E60E00CE590A /* IRImageView.h */,
 				FF1B7DD11581E60E00CE590A /* IRImageView.m */,
 				FF1B7DAA1581E52A00CE590A /* Supporting Files */,
@@ -157,6 +163,7 @@
 				FF1B7DD41581E60E00CE590A /* UIImage+IRImageryAdditions.h in Headers */,
 				FF1B7DD61581E60E00CE590A /* IRImageView.h in Headers */,
 				FFB7CDBD1581E877003062A6 /* UIImage+IRCompatibility.h in Headers */,
+				FFB7CDC71582146D003062A6 /* NSBundle+IRImageryAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +268,7 @@
 				FF1B7DD51581E60E00CE590A /* UIImage+IRImageryAdditions.m in Sources */,
 				FF1B7DD71581E60E00CE590A /* IRImageView.m in Sources */,
 				FFB7CDBE1581E877003062A6 /* UIImage+IRCompatibility.m in Sources */,
+				FFB7CDC81582146D003062A6 /* NSBundle+IRImageryAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

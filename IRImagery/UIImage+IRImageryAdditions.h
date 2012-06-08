@@ -16,8 +16,6 @@ typedef void(^IRImageWritingCallback)(BOOL didWrite, NSError *error);
 
 @interface UIImage (IRAdditions)
 
-+ (UIImage *) irImageNamed:(NSString *)name inBundle:(NSBundle *)bundle;
-
 - (UIImage *) irStandardImage;
 
 - (UIImage *) irDecodedImage;
@@ -25,7 +23,7 @@ typedef void(^IRImageWritingCallback)(BOOL didWrite, NSError *error);
 
 - (UIImage *) irScaledImageWithSize:(CGSize)aSize;
 
-@property (nonatomic, readwrite, retain, getter=irRepresentedObject, setter=irSetRepresentedObject:) id irRepresentedObject;
+@property (nonatomic, readwrite, retain, getter=representedObject, setter=irSetRepresentedObject:) id irRepresentedObject;
 
 - (void) irWriteToSavedPhotosAlbumWithCompletion:(IRImageWritingCallback)aBlock;
 
