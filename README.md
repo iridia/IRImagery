@@ -4,7 +4,7 @@ IRImagery holds a collection of helper classes and views that work with images, 
 
 ## Sample
 
-Look at the Sample App: iridia/IRImagery-Sample@master .
+Look at the Sample App: iridia/IRImagery-Sample@f6ee5a97111de2acb693121f980562dab78cabb5 .
 
 ## Useful Classes and Methods
 
