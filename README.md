@@ -2,6 +2,10 @@
 
 IRImagery holds a collection of helper classes and views that work with images, specifically `UIImage` objects.
 
+## Sample
+
+Look at the Sample App: iridia/IRImagery-Sample@master .
+
 ## Useful Classes and Methods
 
 ### `IRImageView`
