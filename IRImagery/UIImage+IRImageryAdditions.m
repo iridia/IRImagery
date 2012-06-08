@@ -3,7 +3,7 @@
 //  IRImagery
 //
 //  Created by Evadne Wu on 6/16/11.
-//  Copyright 2011 Iridia Productions. All rights reserved.
+//  Copyright (c) 2011 Iridia Productions. All rights reserved.
 //
 
 #import "UIImage+IRImageryAdditions.h"

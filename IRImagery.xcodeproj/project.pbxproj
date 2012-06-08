@@ -24,6 +24,10 @@
 		FFB7CDBE1581E877003062A6 /* UIImage+IRCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB7CDBC1581E876003062A6 /* UIImage+IRCompatibility.m */; };
 		FFB7CDC71582146D003062A6 /* NSBundle+IRImageryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB7CDC51582146D003062A6 /* NSBundle+IRImageryAdditions.h */; };
 		FFB7CDC81582146D003062A6 /* NSBundle+IRImageryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB7CDC61582146D003062A6 /* NSBundle+IRImageryAdditions.m */; };
+		FFB7CDD115821A15003062A6 /* IRImagePageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB7CDCD15821A15003062A6 /* IRImagePageScrollView.h */; };
+		FFB7CDD215821A15003062A6 /* IRImagePageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB7CDCE15821A15003062A6 /* IRImagePageScrollView.m */; };
+		FFB7CDD315821A15003062A6 /* IRImagePageView.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB7CDCF15821A15003062A6 /* IRImagePageView.h */; };
+		FFB7CDD415821A15003062A6 /* IRImagePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB7CDD015821A15003062A6 /* IRImagePageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 		FFB7CDBC1581E876003062A6 /* UIImage+IRCompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+IRCompatibility.m"; path = "IRImagery/UIImage+IRCompatibility.m"; sourceTree = "<group>"; };
 		FFB7CDC51582146D003062A6 /* NSBundle+IRImageryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSBundle+IRImageryAdditions.h"; path = "IRImagery/NSBundle+IRImageryAdditions.h"; sourceTree = "<group>"; };
 		FFB7CDC61582146D003062A6 /* NSBundle+IRImageryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+IRImageryAdditions.m"; path = "IRImagery/NSBundle+IRImageryAdditions.m"; sourceTree = "<group>"; };
+		FFB7CDCD15821A15003062A6 /* IRImagePageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRImagePageScrollView.h; path = IRImagery/IRImagePageScrollView.h; sourceTree = "<group>"; };
+		FFB7CDCE15821A15003062A6 /* IRImagePageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRImagePageScrollView.m; path = IRImagery/IRImagePageScrollView.m; sourceTree = "<group>"; };
+		FFB7CDCF15821A15003062A6 /* IRImagePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRImagePageView.h; path = IRImagery/IRImagePageView.h; sourceTree = "<group>"; };
+		FFB7CDD015821A15003062A6 /* IRImagePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRImagePageView.m; path = IRImagery/IRImagePageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,10 @@
 				FFB7CDC61582146D003062A6 /* NSBundle+IRImageryAdditions.m */,
 				FF1B7DD01581E60E00CE590A /* IRImageView.h */,
 				FF1B7DD11581E60E00CE590A /* IRImageView.m */,
+				FFB7CDCD15821A15003062A6 /* IRImagePageScrollView.h */,
+				FFB7CDCE15821A15003062A6 /* IRImagePageScrollView.m */,
+				FFB7CDCF15821A15003062A6 /* IRImagePageView.h */,
+				FFB7CDD015821A15003062A6 /* IRImagePageView.m */,
 				FF1B7DAA1581E52A00CE590A /* Supporting Files */,
 				FF1B7DBD1581E52A00CE590A /* Tests */,
 				FF1B7DA61581E52A00CE590A /* Frameworks */,
@@ -164,6 +176,8 @@
 				FF1B7DD61581E60E00CE590A /* IRImageView.h in Headers */,
 				FFB7CDBD1581E877003062A6 /* UIImage+IRCompatibility.h in Headers */,
 				FFB7CDC71582146D003062A6 /* NSBundle+IRImageryAdditions.h in Headers */,
+				FFB7CDD115821A15003062A6 /* IRImagePageScrollView.h in Headers */,
+				FFB7CDD315821A15003062A6 /* IRImagePageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +283,8 @@
 				FF1B7DD71581E60E00CE590A /* IRImageView.m in Sources */,
 				FFB7CDBE1581E877003062A6 /* UIImage+IRCompatibility.m in Sources */,
 				FFB7CDC81582146D003062A6 /* NSBundle+IRImageryAdditions.m in Sources */,
+				FFB7CDD215821A15003062A6 /* IRImagePageScrollView.m in Sources */,
+				FFB7CDD415821A15003062A6 /* IRImagePageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

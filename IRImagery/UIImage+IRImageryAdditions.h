@@ -3,7 +3,7 @@
 //  IRImagery
 //
 //  Created by Evadne Wu on 6/16/11.
-//  Copyright 2011 Iridia Productions. All rights reserved.
+//  Copyright (c) 2011 Iridia Productions. All rights reserved.
 //
 //	Portions of code in this class adapted from UIImage+Resize.m
 //  Created by Trevor Harmon
@@ -23,7 +23,7 @@ typedef void (^IRImageWritingCallback) (BOOL didWrite, NSError *error);
 
 - (UIImage *) irScaledImageWithSize:(CGSize)aSize;
 
-@property (nonatomic, readwrite, retain, getter=representedObject, setter=irSetRepresentedObject:) id irRepresentedObject;
+@property (nonatomic, readwrite, retain, getter=irRepresentedObject, setter=irSetRepresentedObject:) id irRepresentedObject;
 
 - (void) irWriteToSavedPhotosAlbumWithCompletion:(IRImageWritingCallback)aBlock;
 

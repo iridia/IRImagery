@@ -18,6 +18,10 @@ IRImagery holds a collection of helper classes and views that work with images, 
 
 *	`-[UIImage irWriteToSavedPhotosAlbumWithCompletion:]` provides a callback block, instead of a selector invocation.
 
+###	`IRImagePageView`
+
+`IRImagePageView` is a simple page view that contains a scrollable, pannable, zoomable view hosting an image.  It uses IRImageView internally, and can be used in junction with `IRPaginatedView` to build a scrollable gallery.
+
 ##	Credits
 
 *	[Evadne Wu](http://twitter.com/evadne) at [Iridia Productions](http://iridia.tw) / [Waveface Inc](http://waveface.com).
