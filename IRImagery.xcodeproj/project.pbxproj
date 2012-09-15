@@ -20,6 +20,10 @@
 		FF1B7DD61581E60E00CE590A /* IRImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1B7DD01581E60E00CE590A /* IRImageView.h */; };
 		FF1B7DD71581E60E00CE590A /* IRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1B7DD11581E60E00CE590A /* IRImageView.m */; };
 		FF1B7DDB1581E70D00CE590A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1B7DDA1581E70D00CE590A /* UIKit.framework */; };
+		FF70FF1D16045B4300EED350 /* UIView+IRImageryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = FF70FF1B16045B4300EED350 /* UIView+IRImageryAdditions.h */; };
+		FF70FF1E16045B4300EED350 /* UIView+IRImageryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FF70FF1C16045B4300EED350 /* UIView+IRImageryAdditions.m */; };
+		FF70FF2616045B9000EED350 /* CALayer+IRImageryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = FF70FF2416045B9000EED350 /* CALayer+IRImageryAdditions.h */; };
+		FF70FF2716045B9000EED350 /* CALayer+IRImageryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FF70FF2516045B9000EED350 /* CALayer+IRImageryAdditions.m */; };
 		FFB7CDBD1581E877003062A6 /* UIImage+IRCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB7CDBB1581E876003062A6 /* UIImage+IRCompatibility.h */; };
 		FFB7CDBE1581E877003062A6 /* UIImage+IRCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB7CDBC1581E876003062A6 /* UIImage+IRCompatibility.m */; };
 		FFB7CDC71582146D003062A6 /* NSBundle+IRImageryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB7CDC51582146D003062A6 /* NSBundle+IRImageryAdditions.h */; };
@@ -58,6 +62,10 @@
 		FF1B7DD01581E60E00CE590A /* IRImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRImageView.h; path = IRImagery/IRImageView.h; sourceTree = "<group>"; };
 		FF1B7DD11581E60E00CE590A /* IRImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRImageView.m; path = IRImagery/IRImageView.m; sourceTree = "<group>"; };
 		FF1B7DDA1581E70D00CE590A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FF70FF1B16045B4300EED350 /* UIView+IRImageryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+IRImageryAdditions.h"; path = "IRImagery/UIView+IRImageryAdditions.h"; sourceTree = "<group>"; };
+		FF70FF1C16045B4300EED350 /* UIView+IRImageryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+IRImageryAdditions.m"; path = "IRImagery/UIView+IRImageryAdditions.m"; sourceTree = "<group>"; };
+		FF70FF2416045B9000EED350 /* CALayer+IRImageryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+IRImageryAdditions.h"; path = "IRImagery/CALayer+IRImageryAdditions.h"; sourceTree = "<group>"; };
+		FF70FF2516045B9000EED350 /* CALayer+IRImageryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+IRImageryAdditions.m"; path = "IRImagery/CALayer+IRImageryAdditions.m"; sourceTree = "<group>"; };
 		FFB7CDBB1581E876003062A6 /* UIImage+IRCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+IRCompatibility.h"; path = "IRImagery/UIImage+IRCompatibility.h"; sourceTree = "<group>"; };
 		FFB7CDBC1581E876003062A6 /* UIImage+IRCompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+IRCompatibility.m"; path = "IRImagery/UIImage+IRCompatibility.m"; sourceTree = "<group>"; };
 		FFB7CDC51582146D003062A6 /* NSBundle+IRImageryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSBundle+IRImageryAdditions.h"; path = "IRImagery/NSBundle+IRImageryAdditions.h"; sourceTree = "<group>"; };
@@ -97,10 +105,14 @@
 			children = (
 				FF1B7DAC1581E52A00CE590A /* IRImagery.h */,
 				FF1B7DAD1581E52A00CE590A /* IRImagery.m */,
+				FF70FF2416045B9000EED350 /* CALayer+IRImageryAdditions.h */,
+				FF70FF2516045B9000EED350 /* CALayer+IRImageryAdditions.m */,
 				FF1B7DCE1581E60E00CE590A /* UIImage+IRImageryAdditions.h */,
 				FF1B7DCF1581E60E00CE590A /* UIImage+IRImageryAdditions.m */,
 				FFB7CDBB1581E876003062A6 /* UIImage+IRCompatibility.h */,
 				FFB7CDBC1581E876003062A6 /* UIImage+IRCompatibility.m */,
+				FF70FF1B16045B4300EED350 /* UIView+IRImageryAdditions.h */,
+				FF70FF1C16045B4300EED350 /* UIView+IRImageryAdditions.m */,
 				FFB7CDC51582146D003062A6 /* NSBundle+IRImageryAdditions.h */,
 				FFB7CDC61582146D003062A6 /* NSBundle+IRImageryAdditions.m */,
 				FF1B7DD01581E60E00CE590A /* IRImageView.h */,
@@ -178,6 +190,8 @@
 				FFB7CDC71582146D003062A6 /* NSBundle+IRImageryAdditions.h in Headers */,
 				FFB7CDD115821A15003062A6 /* IRImagePageScrollView.h in Headers */,
 				FFB7CDD315821A15003062A6 /* IRImagePageView.h in Headers */,
+				FF70FF1D16045B4300EED350 /* UIView+IRImageryAdditions.h in Headers */,
+				FF70FF2616045B9000EED350 /* CALayer+IRImageryAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +299,8 @@
 				FFB7CDC81582146D003062A6 /* NSBundle+IRImageryAdditions.m in Sources */,
 				FFB7CDD215821A15003062A6 /* IRImagePageScrollView.m in Sources */,
 				FFB7CDD415821A15003062A6 /* IRImagePageView.m in Sources */,
+				FF70FF1E16045B4300EED350 /* UIView+IRImageryAdditions.m in Sources */,
+				FF70FF2716045B9000EED350 /* CALayer+IRImageryAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
