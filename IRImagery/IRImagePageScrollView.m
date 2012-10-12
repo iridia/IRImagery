@@ -39,4 +39,16 @@
 
 }
 
+- (UIView *) hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+
+	UIView *superAnswer = [super hitTest:point withEvent:event];
+	
+	if (!superAnswer || (superAnswer == self))
+		if (self.subviews)
+			return [self.subviews objectAtIndex:0];
+	
+	return superAnswer;
+
+}
+
 @end
