@@ -8,3 +8,4 @@
 
 #import "IRImageView.h"
 #import "UIImage+IRImageryAdditions.h"
+#import "UIView+IRImageryAdditions.h"
